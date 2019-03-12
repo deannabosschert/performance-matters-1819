@@ -10,87 +10,33 @@ app.get('/', function (req, res){
   let route = req.url
   res.sendFile(__dirname+'/static/index.html')
 })
-app.get('/avontuur', avontuur)
-app.get('/detective', detective)
-app.get('/dieren', dieren)
-app.get('/geschiedenis', geschiedenis)
-app.get('/griezelen', griezelen)
-app.get('/humor', humor)
-app.get('/oorlogVerzet', oorlogVerzet)
-app.get('/psychologie', psychologie)
-app.get('/spanning', spanning)
-app.get('/sport', sport)
-app.get('/sprookjes', sprookjes)
-app.get('/vriendschapLiefde', vriendschapLiefde)
+app.get('/:id', get)
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
-function avontuur (req, res){
-  let route = req.url
-  res.render('avontuur.ejs')
-
+function get(req, res){
+  var id = req.params.id
+  // var result = {errors: [], data: null} // db.get(id)
+  // result.data = db.get(id)
+  res.format({
+    // json: () => res.json(result),
+    html: () => res.render(id + '.ejs')
+  })
 }
 
-function detective (req, res){
-  let route = req.url
-  res.render('detective.ejs')
-
-}
-function dieren (req, res){
-  let route = req.url
-  res.render('dieren.ejs')
-
-}
-
-function geschiedenis (req, res){
-  let route = req.url
-  res.render('geschiedenis.ejs')
-
-}
-
-function griezelen (req, res){
-  let route = req.url
-  res.render('griezelen.ejs')
-
-}
-
-function humor (req, res){
-  let route = req.url
-  res.render('humor.ejs')
-
-}
-
-function oorlogVerzet (req, res){
-  let route = req.url
-  res.render('oorlogVerzet.ejs')
-
-}
-
-function psychologie (req, res){
-  let route = req.url
-  res.render('psychologie.ejs')
-
-}
-
-function spanning (req, res){
-  let route = req.url
-  res.render('spanning.ejs')
-
-}
-
-function sport (req, res){
-  let route = req.url
-  res.render('sport.ejs')
-
-}
-
-function sprookjes (req, res){
-  let route = req.url
-  res.render('sprookjes.ejs')
-
-}
-
-function vriendschapLiefde (req, res){
-  let route = req.url
-  res.render('vriendschapLiefde.ejs')
-
-}
+// function get(req, res){
+//   var id = req.params.id
+//   var result = {errors: [], data: null} // db.get(id)
+//   var genreExists = db.get(id)
+//   if(!genreExists){
+//     if (db.removed(id)) {
+//       return showError(410,'Gone', res)
+//     }
+//
+//   }
+//   result.data = db.get(id)
+//   res.format({
+//     json: () => res.json(result),
+//     html: () => res.render('detail.ejs', Object.assign({}, result, helpers))
+//   })
+// }
