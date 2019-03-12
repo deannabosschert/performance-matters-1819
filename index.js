@@ -9,7 +9,6 @@ app.set('view engine', 'ejs')
 app.get('/', function (req, res){
   let route = req.url
   res.sendFile(__dirname+'/static/index.html')
-
 })
 app.get('/avontuur', avontuur)
 app.get('/detective', detective)
