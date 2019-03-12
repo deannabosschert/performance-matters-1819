@@ -16,8 +16,8 @@ app.get('/:id', get)
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 function get(req, res){
-  let id = req.params.id
-  let result = {errors: [], data: null} // db.get(id)
+  const id = req.params.id
+  const result = {errors: [], data: null} // db.get(id)
   const dataJson = 'data.json'
   fs.readFile(__dirname + '/data.json', function(err, data){
     const jsonData = JSON.parse(data.toString())
@@ -31,8 +31,10 @@ function get(req, res){
          if(genreNaam === "Humor"){
            console.log('dit is een humoristisch verhaal')
            res.format({
-            html: () => res.render('humor.ejs')
-          })
+              json: () => res.json(result),
+              html: () => res.render(id + '.ejs')
+            })
+           // res.end()
          }
 
       }
