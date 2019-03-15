@@ -1,19 +1,21 @@
 # Performance Matters @cmda-minor-web · 2018-2019
+https://deannabosschert.github.io/performance-matters-1819/
 
 ### To Do
-[ ] Render genreOverzicht pages
-[ ] Combine genreFilters in one function
-[ ] Combine seperate genrepages in one .ejs file?
-[ ] Create detailpage of a single book
-[ ] Optimize performance
-[ ] Write script for extracting data from the API and updating the already existing JSON file
-[ ] Create button for refreshing the JSON data file
+- [ ] Render genreOverzicht pages
+- [ ] Combine genreFilters in one function
+- [ ] Combine seperate genrepages in one .ejs file?
+- [ ] Create detailpage of a single book
+- [ ] Optimize performance
+- [ ] Write script for extracting data from the API and updating the already existing JSON file
+- [ ] Create button for refreshing the JSON data file
 
 
 ### Description
 This is a web-app based on the API of the OBA (Openbare Bibliotheek Amsterdam; public library of Amsterdam).
-Children aged 0-12 can pick out books to read via a visual representation of the available genres as they often pick out books already only based on association with the cover as well.
+Children aged 0-12 can pick out books to read via a visual representation of the available genres as they often pick out books already only based on association with the cover of the book aswell.
 
+This will make picking out a book of the genre they are interested in, much easier.
 
 ###  Install
 `git clone https://github.com/deannabosschert/performance-matters-1819.git`  
