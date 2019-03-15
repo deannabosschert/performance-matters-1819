@@ -21,6 +21,12 @@ function get(req, res){
   const id = req.params.id
   const result = {errors: [], data: null} // db.get(id)
   const jsonFile = 'data.json'
+
+  //  zorg er eerst voor dat je jsonfile wordt geparsed naar strings
+  // dan heb je die data in een lijst staan en loop je erdoorheen met een forEach
+  // binnen die forEach filter je dan ff op de soorten genres, dat alleen die soorten boeken worden ingeladen
+  // ook ff nieuwe benamingen geven, dat je in je .ejs kunt selecteren met data.genre.titel of whatever
+// buiten de scope van je foreach (dus zonder dat dat loopt lol, mss ook buiten readFile?) dat de bijbehorende id+.ejs wordt gerenderd
   fs.readFile(__dirname + '/data.json', function(err, data){
     const jsonData = JSON.parse(data.toString())
 
@@ -30,11 +36,11 @@ function get(req, res){
         res.format({
            json: () => res.json(result),
            html: () => res.render(id + '.ejs')
-         })
-
+        })
     })
   })
-}
+
+} //einde van get
 // een genre zoals in de json file = boek.genre
 // er wordt een id opgevraagd --> check of ie uberhaupt voorkomt in boek.genre
 // zoja --> id is identiek aan de naam van een genre dus dat zit nog steeds in ID
