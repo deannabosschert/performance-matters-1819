@@ -2,7 +2,17 @@
 
 ### To Do
 [ ] Render genreOverzicht pages
-[ ] Combine genreFilters
+[ ] Combine genreFilters in one function
+[ ] Combine seperate genrepages in one .ejs file?
+[ ] Create detailpage of a single book
+[ ] Optimize performance
+[ ] Write script for extracting data from the API and updating the already existing JSON file
+[ ] Create button for refreshing the JSON data file
+
+
+### Description
+This is a web-app based on the API of the OBA (Openbare Bibliotheek Amsterdam; public library of Amsterdam).
+Children aged 0-12 can pick out books to read via a visual representation of the available genres as they often pick out books already only based on association with the cover as well.
 
 
 ###  Install
@@ -13,13 +23,20 @@
 ### Packages
 This is where I'll document the packages I've used:
 * dotenv: "^5.0.1"  
-* ejs: "^2.5.7"  
-* express: "^4.16.2"  
+* ejs: "^2.6.1"  
+* express: "^4.16.4"  
 * express-session: "^1.15.6"  
 * fs: "0.0.1-security"  
 * gyp: "^0.5.0"  
 * node-gyp: "^3.6.2"  
-* rebuild: "^0.1.2"  
+* rebuild: "^0.1.2"
+* nodemon: "^1.18.10"  
+* scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  }
+
+
 
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
