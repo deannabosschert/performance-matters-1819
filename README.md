@@ -1,5 +1,10 @@
 # Performance Matters @cmda-minor-web · 2018-2019
 
+### To Do
+[ ] Render genreOverzicht pages
+[ ] Combine genreFilters
+
+
 ###  Install
 `git clone https://github.com/deannabosschert/performance-matters-1819.git`  
 `cd /performance-matters-1819.git`  
