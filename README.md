@@ -10,6 +10,9 @@ https://deannabosschert.github.io/performance-matters-1819/
 - [ ] Write script for extracting data from the API and updating the already existing JSON file
 - [ ] Create button for refreshing the JSON data file
 
+### Screenshot
+![screenshot of the homepage](https://d2mxuefqeaa7sj.cloudfront.net/s_5BF35D1240A6D563DE719889CCC922379A8F175CC8108DCC3210A213401458E4_1552645370415_Screenshot+2019-03-15+at+11.21.47.png)
+
 
 ### Description
 This is a web-app based on the API of the OBA (Openbare Bibliotheek Amsterdam; public library of Amsterdam).
